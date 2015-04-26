@@ -43,6 +43,7 @@
     ("rhombus-charcoal"       . "#656868")
     ("rhombus-orange"         . "#fa9a4b")
     ("rhombus-orange-1"       . "#D84c00")
+    ("rhombus-orange+1"       . "#Ff5d00")
     ("rhombus-yellow"         . "#D6d300")
     ("rhombus-olive"          . "#24992c")
     ("rhombus-violet"         . "#A630db")
@@ -146,15 +147,15 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-lock-warning-face ((t (:foreground ,rhombus-yellow :weight bold))))
    `(font-lock-function-name-face ((t (:foreground ,rhombus-orange ))))
    `(font-lock-variable-name-face ((t (:foreground ,rhombus-grey))))
-   `(font-lock-keyword-face ((t (:foreground ,rhombus-blue))))
+   `(font-lock-keyword-face ((t (:foreground ,rhombus-red))))
    `(font-lock-comment-face ((t (:foreground ,rhombus-charcoal))))
-   ;;`(font-lock-comment-delimiter-face ((t (:foreground ,rhombus-charcoal :weight light :slant italic))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,rhombus-charcoal :weight light :slant italic))))
    `(font-lock-type-face ((t (:foreground ,rhombus-sand))))
-   `(font-lock-constant-face ((t (:foreground ,rhombus-dark-violet))))
-   `(font-lock-builtin-face ((t (:foreground ,rhombus-violet))))
+   `(font-lock-constant-face ((t (:foreground ,rhombus-orange-1))))
+   `(font-lock-builtin-face ((t (:foreground ,rhombus-orange+1))))
    `(font-lock-preprocessor-face ((t (:foreground ,rhombus-sand))))
-   `(font-lock-string-face ((t (:foreground ,rhombus-green))))
- ;;  `(font-lock-doc-face ((t (:foreground ,rhombus-green))))
+   `(font-lock-string-face ((t (:foreground ,rhombus-sand))))
+   `(font-lock-doc-face ((t (:foreground ,rhombus-green))))
 
 
    ;; >>>>> eshell
@@ -295,5 +296,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      (add-to-list 'custom-theme-load-path
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
+
+(provide-theme 'rhombus)
 
 ;;; rhombus-theme.el ends here
