@@ -38,7 +38,7 @@
     ("rhombus-bg"             . "#000000")
     ("rhombus-bg+1"           . "#171717")
 
-;; The Main Pallette
+    ;; The Main Pallette
     ("rhombus-red"            . "#9e1200")
     ("rhombus-dull-red"       . "#9e4d4a")
     ("rhombus-charcoal"       . "#656868")
@@ -63,7 +63,7 @@
     ("rhombus-teal"           . "#65A399")
 
 
-;; Other People's Good Ideas
+    ;; Other People's Good Ideas
     ("rhombus-link"           . "#8ACDAA")
     ("rhombus-warn"           . "#9e3564")
     ("rhombus-succ"           . "#809a4d")
@@ -131,7 +131,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; >>>>> mode-line
    `(mode-line    ((,class (:foreground ,rhombus-charcoal
                                         :background ,"black"
-                                       ;; :box (:line-width -1 :style released-button)
+                                        ;; :box (:line-width -1 :style released-button)
                                         ))
                    (t :inverse-video nil)))
 
@@ -139,7 +139,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(mode-line-buffer-id ((t (:foreground ,rhombus-grey))))
    `(minibuffer-prompt ((t (:foreground ,rhombus-violet))))
 
-   ;;   `(mode-line-highlight ((t (:foreground ,rhombus-lime))))
+   ;;`(mode-line-highlight ((t (:foreground ,rhombus-lime))))
 
    ;; linum
    `(linum ((t (:foreground ,rhombus-charcoal :background ,"black"))))
@@ -260,33 +260,50 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
 
    ;; >>>>> Helm
-   ;; `(helm-bookmark-info)
-   ;; `(helm-helper)
-   ;; `(helm-bookmark-w3m)
-   ;; `(helm-apt-installed)
-   ;; `(helm-apt-deinstalled)
-   ;; `(helm-time-zone-current)
-   ;; `(helm-time-zone-home)
-   ;; `(helm-buffer-saved-out)
-   ;; `(helm-buffer-not-saved)
-   ;; `(helm-grep-match)
-   ;; `(helm-grep-file)
-   ;; `(helm-top-columns)
-   ;; `(helm-M-x-key)
-   ;; `(helm-locate-finish)
-   ;; `(helm-etags-file)
-   ;; `(helm-lisp-show-completion)
-   ;; `(helm-lisp-completion-info)
-   ;; `(helm-source-header)
-   ;; `(helm-visible-mark)
-   ;; `(helm-match-item)
-   ;; `(helm-selection-line)
-   ;; `(helm-ff-prefix)
-   ;; `(helm-ff-executable)
-   ;; `(helm-moccur-buffer)
-   ;; `(helm-resume-need-update)
-   `(helm-ff-directory ((t (:background ,rhombus-bg+1 :foreground ,rhombus-orange+1))))
-   `(helm-selection ((t (:background ,rhombus-hl))))
+   ;; `(helm-header
+   ;;     ((t (:foreground ,zenburn-green
+   ;;                      :background ,zenburn-bg
+   ;;                      :underline nil
+   ;;                      :box nil))))
+   ;;   `(helm-source-header
+   ;;     ((t (:foreground ,zenburn-yellow
+   ;;                      :background ,zenburn-bg-1
+   ;;                      :underline nil
+   ;;                      :weight bold
+   ;;                      :box (:line-width -1 :style released-button)))))
+   `(helm-selection ((t (:background ,rhombus-hl :underline nil))))
+   `(helm-selection-line ((t (:background ,rhombus-bg+1))))
+   ;;   `(helm-visible-mark ((t (:foreground ,zenburn-bg :background ,zenburn-yellow-2))))
+   ;;   `(helm-candidate-number ((t (:foreground ,zenburn-green+4 :background ,zenburn-bg-1))))
+   ;;   `(helm-separator ((t (:foreground ,zenburn-red :background ,zenburn-bg))))
+   ;;   `(helm-time-zone-current ((t (:foreground ,zenburn-green+2 :background ,zenburn-bg))))
+   ;;   `(helm-time-zone-home ((t (:foreground ,zenburn-red :background ,zenburn-bg))))
+   ;;   `(helm-bookmark-addressbook ((t (:foreground ,zenburn-orange :background ,zenburn-bg))))
+   ;;   `(helm-bookmark-directory ((t (:foreground nil :background nil :inherit helm-ff-directory))))
+   ;;   `(helm-bookmark-file ((t (:foreground nil :background nil :inherit helm-ff-file))))
+   ;;   `(helm-bookmark-gnus ((t (:foreground ,zenburn-magenta :background ,zenburn-bg))))
+   ;;   `(helm-bookmark-info ((t (:foreground ,zenburn-green+2 :background ,zenburn-bg))))
+   ;;   `(helm-bookmark-man ((t (:foreground ,zenburn-yellow :background ,zenburn-bg))))
+   ;;   `(helm-bookmark-w3m ((t (:foreground ,zenburn-magenta :background ,zenburn-bg))))
+   ;;   `(helm-buffer-not-saved ((t (:foreground ,zenburn-red :background ,zenburn-bg))))
+   ;;   `(helm-buffer-process ((t (:foreground ,zenburn-cyan :background ,zenburn-bg))))
+   ;;   `(helm-buffer-saved-out ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
+   ;;   `(helm-buffer-size ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
+   `(helm-ff-directory ((t (:background ,rhombus-bg+1 :foreground ,rhombus-yellow))))
+   `(helm-ff-file ((t (:foreground ,rhombus-fg :background ,rhombus-bg+1 :weight normal))))
+   `(helm-ff-executable ((t (:foreground ,rhombus-violet :background ,rhombus-bg+1 :weight normal))))
+   `(helm-ff-invalid-symlink ((t (:foreground ,rhombus-warn :background ,rhombus-bg+1 :weight bold))))
+   `(helm-ff-symlink ((t (:foreground ,rhombus-light-blue :background ,rhombus-bg+1 :weight bold))))
+   `(helm-ff-prefix ((t (:foreground ,rhombus-bg :background ,rhombus-orange :weight normal))))
+   ;;   `(helm-grep-cmd-line ((t (:foreground ,zenburn-cyan :background ,zenburn-bg))))
+   ;;   `(helm-grep-file ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
+   ;;   `(helm-grep-finish ((t (:foreground ,zenburn-green+2 :background ,zenburn-bg))))
+   ;;   `(helm-grep-lineno ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
+   ;;   `(helm-grep-match ((t (:foreground nil :background nil :inherit helm-match))))
+   ;;   `(helm-grep-running ((t (:foreground ,zenburn-red :background ,zenburn-bg))))
+   ;;   `(helm-moccur-buffer ((t (:foreground ,zenburn-cyan :background ,zenburn-bg))))
+   ;;   `(helm-mu-contacts-address-face ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
+   ;;   `(helm-mu-contacts-name-face ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
    `(helm-source-header ((t (:background ,rhombus-dark-brown :foreground ,rhombus-fg :weight bold :height 1.3 :family "Sans Serif"))))
    ))
 
