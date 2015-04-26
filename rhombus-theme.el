@@ -104,27 +104,20 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; The face for the narrow fringes to the left and right of windows on graphic displays.
    `(fringe ((t (:foreground ,rhombus-fg :background ,rhombus-bg+1))))
 
-   ;; hru? -- RMD
-   ;; fixed line displayed at the top of the emacs window, not in XEmacs
-   ;; `(header-line ((t (:foreground ,rhombus-grey
-   ;;                                :background ,"black"
-   ;;                                :box (:line-width -1 :style released-button)))))
-
    ;;text highlighting in various contexts, when the mouse cursor is moved over a hyperlink.
    `(highlight ((t (:background ,rhombus-hl))))
 
    ;; “lazy matches” for Isearch and Query Replace (matches other than the current one).
-   `(lazy-highlight ((t (:background ,rhombus-yellow :foreground ,"black" :weight extra-bold))))
+   `(lazy-highlight ((t (:background ,rhombus-olive :foreground ,"black" :weight extra-bold))))
 
    ;; This face is used to highlight the current Isearch match
-   `(isearch ((t (:background ,rhombus-succ :foreground ,"black" :weight extra-bold))))
-
+   `(isearch ((t (:background ,rhombus-light-brown :foreground ,"black" :weight extra-bold))))
 
    `(success ((t (:foreground ,rhombus-succ :weight bold))))
    `(warning ((t (:foreground ,rhombus-warn :weight bold))))
 
    ;; This face is used for displaying an active region
-   `(region ((t (:background ,"black"))))
+   `(region ((t (:background ,rhombus-bg+1))))
 
    `(show-paren-match-face ((t (:background ,rhombus-olive :foreground ,"black" ))))
 
