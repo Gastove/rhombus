@@ -40,27 +40,28 @@
 
 ;; The Main Pallette
     ("rhombus-red"            . "#9e1200")
+    ("rhombus-dull-red"       . "#9e4d4a")
     ("rhombus-charcoal"       . "#656868")
     ("rhombus-orange"         . "#fa9a4b")
     ("rhombus-orange-1"       . "#D84c00")
     ("rhombus-orange+1"       . "#Ff5d00")
     ("rhombus-yellow"         . "#D6d300")
-    ("rhombus-olive"          . "#24992c")
     ("rhombus-violet"         . "#A630db")
     ("rhombus-grey"           . "#Bbbbbb")
     ("rhombus-dark-brown"     . "#9d5717")
     ("rhombus-light-brown"    . "#F7b372")
     ("rhombus-sand"           . "#C7B299")
-    ("rhombus-green"          . "#24992c")
     ("rhombus-pink"           . "#D82e88")
 
-;; Backup-dancing colors
+    ;; Backup-dancing colors
+    ("rhombus-olive"          . "#24992c")
+    ("rhombus-green"          . "#24992c")
     ("rhombus-blue"           . "#1789d6")
     ("rhombus-light-blue"     . "#6cbbf1")
     ("rhombus-dark-violet"    . "#635770")
     ("rhombus-darker-violet"  . "#433F4F")
     ("rhombus-teal"           . "#65A399")
-    ("rhombus-dull-red"       . "#A55662")
+
 
 ;; Other People's Good Ideas
     ("rhombus-link"           . "#8ACDAA")
@@ -146,14 +147,14 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    ;; >>>>> font-lock
    `(font-lock-warning-face ((t (:foreground ,rhombus-warn :weight bold))))
-   `(font-lock-function-name-face ((t (:foreground ,rhombus-orange))))
+   `(font-lock-function-name-face ((t (:foreground ,rhombus-orange-1))))
    `(font-lock-variable-name-face ((t (:foreground ,rhombus-grey))))
    `(font-lock-keyword-face ((t (:foreground ,rhombus-light-blue))))
    `(font-lock-comment-face ((t (:foreground ,rhombus-charcoal))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,rhombus-charcoal :weight light :slant italic))))
    `(font-lock-type-face ((t (:foreground ,rhombus-light-brown))))
-   `(font-lock-constant-face ((t (:foreground ,rhombus-orange-1))))
-   `(font-lock-builtin-face ((t (:foreground ,rhombus-yellow))))
+   `(font-lock-constant-face ((t (:foreground ,rhombus-orange+1))))
+   `(font-lock-builtin-face ((t (:foreground ,rhombus-dull-red))))
    `(font-lock-preprocessor-face ((t (:foreground ,rhombus-sand))))
    `(font-lock-string-face ((t (:foreground ,rhombus-fg+1))))
    `(font-lock-doc-face ((t (:foreground ,rhombus-grey))))
@@ -252,11 +253,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(flyspell-duplicate ((t (:underline (:color ,rhombus-yellow :style wave)))))
 
    ;; >>>>> Company Mode
-   ;; `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
-   ;; `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-   ;; `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
-   ;; `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-   ;; `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name rhombus-bg+1 2)))))
+   `(company-scrollbar-bg ((t (:background ,(color-lighten-name rhombus-bg+1 10)))))
+   `(company-scrollbar-fg ((t (:background ,(color-lighten-name rhombus-bg+1 5)))))
+   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
 
    ;; >>>>> Helm
    ;; `(helm-bookmark-info)
@@ -284,7 +285,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; `(helm-ff-executable)
    ;; `(helm-moccur-buffer)
    ;; `(helm-resume-need-update)
-   `(helm-ff-directory ((t (:background ,rhombus-bg+1 :foreground ,rhombus-red))))
+   `(helm-ff-directory ((t (:background ,rhombus-bg+1 :foreground ,rhombus-orange+1))))
    `(helm-selection ((t (:background ,rhombus-hl))))
    `(helm-source-header ((t (:background ,rhombus-dark-brown :foreground ,rhombus-fg :weight bold :height 1.3 :family "Sans Serif"))))
    ))
