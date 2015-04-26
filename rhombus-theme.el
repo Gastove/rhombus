@@ -236,7 +236,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(sml/numbers-separator ((t (:foreground ,rhombus-charcoal))))
    `(sml/client ((t (:foreground ,rhombus-succ))))
    `(sml/not-modified ((t (:foreground ,rhombus-yellow))))
-   `(sml/git  ((t (:foreground ,rhombus-blue))))
+   `(sml/git  ((t (:foreground ,rhombus-light-blue))))
    `(sml/vc-edited  ((t (:foreground ,rhombus-blue))))
    `(sml/modes ((t (:foreground ,rhombus-pink))))
    `(sml/position-percentage ((t (:foreground ,rhombus-charcoal))))
@@ -252,17 +252,19 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
 
    ;; >>>>> Helm
-   ;; `(helm-header
-   ;;     ((t (:foreground ,zenburn-green
-   ;;                      :background ,zenburn-bg
-   ;;                      :underline nil
-   ;;                      :box nil))))
-   ;;   `(helm-source-header
-   ;;     ((t (:foreground ,zenburn-yellow
-   ;;                      :background ,zenburn-bg-1
-   ;;                      :underline nil
-   ;;                      :weight bold
-   ;;                      :box (:line-width -1 :style released-button)))))
+   `(helm-header
+     ((t (:foreground ,rhombus-dark-brown
+                      :background ,rhombus-bg
+                      :underline nil
+                      :box nil))))
+   `(helm-source-header
+     ((t (:background ,rhombus-light-brown
+                      :foreground ,rhombus-fg
+                      :weight bold
+                      :underline nil
+                      :box (:line-width -1 :style released-button)
+                      :height 1.3
+                      :family "Sans Serif"))))
    `(helm-selection ((t (:background ,rhombus-hl :underline nil))))
    `(helm-selection-line ((t (:background ,rhombus-bg+1))))
    ;;   `(helm-visible-mark ((t (:foreground ,zenburn-bg :background ,zenburn-yellow-2))))
@@ -296,21 +298,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;;   `(helm-moccur-buffer ((t (:foreground ,zenburn-cyan :background ,zenburn-bg))))
    ;;   `(helm-mu-contacts-address-face ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
    ;;   `(helm-mu-contacts-name-face ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
-   `(helm-source-header
-     ((t (:background ,rhombus-dark-brown
-                      :foreground ,rhombus-fg
-                      :weight bold
-                      :underline nil
-                      :box (:line-width -1 :style released-button)
-                      :height 1.3
-                      :family "Sans Serif"))))
 
    ;; >>>>> Magit, if I ever want to tweak it
-   ;; `(magit-item-highlight ((t (:background ,zenburn-bg+05))))
-   ;; `(magit-section-title ((t (:foreground ,zenburn-yellow :weight bold))))
-   ;; `(magit-process-ok ((t (:foreground ,zenburn-green :weight bold))))
+   `(magit-item-highlight ((t (:background ,rhombus-bg+1))))
+   `(magit-section-title ((t (:foreground ,rhombus-orange :weight bold))))
+   `(magit-process-ok ((t (:foreground ,rhombus-succ :weight bold))))
    ;; `(magit-process-ng ((t (:foreground ,zenburn-red :weight bold))))
-   ;; `(magit-branch ((t (:foreground ,zenburn-blue :weight bold))))
+   `(magit-branch ((t (:foreground ,rhombus-light-blue :weight bold))))
    ;; `(magit-log-author ((t (:foreground ,zenburn-orange))))
    ;; `(magit-log-sha1 ((t (:foreground, zenburn-orange))))
 
