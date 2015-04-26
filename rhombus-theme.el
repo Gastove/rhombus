@@ -296,7 +296,35 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;;   `(helm-moccur-buffer ((t (:foreground ,zenburn-cyan :background ,zenburn-bg))))
    ;;   `(helm-mu-contacts-address-face ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
    ;;   `(helm-mu-contacts-name-face ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
-   `(helm-source-header ((t (:background ,rhombus-dark-brown :foreground ,rhombus-fg :weight bold :height 1.3 :family "Sans Serif"))))
+   `(helm-source-header
+     ((t (:background ,rhombus-dark-brown
+                      :foreground ,rhombus-fg
+                      :weight bold
+                      :underline nil
+                      :box (:line-width -1 :style released-button)
+                      :height 1.3
+                      :family "Sans Serif"))))
+
+   ;; >>>>> Magit, if I ever want to tweak it
+   ;; `(magit-item-highlight ((t (:background ,zenburn-bg+05))))
+   ;; `(magit-section-title ((t (:foreground ,zenburn-yellow :weight bold))))
+   ;; `(magit-process-ok ((t (:foreground ,zenburn-green :weight bold))))
+   ;; `(magit-process-ng ((t (:foreground ,zenburn-red :weight bold))))
+   ;; `(magit-branch ((t (:foreground ,zenburn-blue :weight bold))))
+   ;; `(magit-log-author ((t (:foreground ,zenburn-orange))))
+   ;; `(magit-log-sha1 ((t (:foreground, zenburn-orange))))
+
+   ;; >>>>> whitespace-mode
+   ;; `(whitespace-space ((t (:background ,zenburn-bg+1 :foreground ,zenburn-bg+1))))
+   ;; `(whitespace-hspace ((t (:background ,zenburn-bg+1 :foreground ,zenburn-bg+1))))
+   ;; `(whitespace-tab ((t (:background ,zenburn-red-1))))
+   ;; `(whitespace-newline ((t (:foreground ,zenburn-bg+1))))
+   ;; `(whitespace-trailing ((t (:background ,zenburn-red))))
+   ;; `(whitespace-line ((t (:background ,zenburn-bg :foreground ,zenburn-magenta))))
+   ;; `(whitespace-space-before-tab ((t (:background ,zenburn-orange :foreground ,zenburn-orange))))
+   ;; `(whitespace-indentation ((t (:background ,zenburn-yellow :foreground ,zenburn-red))))
+   ;; `(whitespace-empty ((t (:background ,zenburn-yellow))))
+   ;; `(whitespace-space-after-tab ((t (:background ,zenburn-yellow :foreground ,zenburn-red))))
    ))
 
 ;;; Footer
