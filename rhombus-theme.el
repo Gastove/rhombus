@@ -41,29 +41,31 @@
     ("rhombus-bg+1"           . "#171717")
 
     ;; The Main Pallette
-    ("rhombus-red"            . "#9e1200")
+    ("rhombus-dark-red"       . "#9e1200")
     ("rhombus-dull-red"       . "#9e4d4a")
-    ("rhombus-charcoal"       . "#656868")
+    ("rhombus-red"            . "#Ff2600")
     ("rhombus-orange"         . "#fa9a4b")
     ("rhombus-orange-1"       . "#D84c00")
     ("rhombus-orange+1"       . "#Ff5d00")
     ("rhombus-yellow"         . "#D6d300")
+    ("rhombus-purple"         . "#932092")
     ("rhombus-violet"         . "#A630db")
+    ("rhombus-violet-1"       . "#635770")
+    ("rhombus-violet-2"       . "#433F4F")
+    ("rhombus-off-white"      . "#FFE0B2")
+    ("rhombus-charcoal"       . "#656868")
     ("rhombus-grey"           . "#Bbbbbb")
     ("rhombus-dark-brown"     . "#9d5717")
-    ("rhombus-light-brown"    . "#F7b372")
-    ("rhombus-sand"           . "#C7B299")
-    ("rhombus-pink"           . "#D82e88")
+    ("rhombus-light-brown"    . "#Fff59f")
 
     ;; Backup-dancing colors
     ("rhombus-olive"          . "#24992c")
     ("rhombus-green"          . "#24992c")
     ("rhombus-blue"           . "#1789d6")
-    ("rhombus-light-blue"     . "#6cbbf1")
-    ("rhombus-dark-violet"    . "#635770")
-    ("rhombus-darker-violet"  . "#433F4F")
+    ("rhombus-light-blue"     . "#9ce9f1")
     ("rhombus-teal"           . "#65A399")
-
+    ("rhombus-pink"           . "#D82e88")
+    ("rhombus-sand"           . "#C7B299")
 
     ;; Other People's Good Ideas
     ("rhombus-link"           . "#8ACDAA")
@@ -71,7 +73,9 @@
     ("rhombus-succ"           . "#809a4d")
     ("rhombus-hl"             . "#1D1D1D")))
 
-;;(makunbound 'rhombus-colors-alist)
+;; Testing utility. Leave commented; C-x C-e to unbind the alist so eval-buffer
+;; picks up changes
+;; (makunbound 'rhombus-colors-alist)
 
 ;; This is seriously cool. H/T to whoever came up with it! Helpful hint: it was
 ;; not me. I got it from badger-theme.el
@@ -142,17 +146,17 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    ;; >>>>> font-lock
    `(font-lock-warning-face ((t (:foreground ,rhombus-warn :weight bold))))
-   `(font-lock-function-name-face ((t (:foreground ,rhombus-orange-1))))
-   `(font-lock-variable-name-face ((t (:foreground ,rhombus-grey))))
-   `(font-lock-keyword-face ((t (:foreground ,rhombus-light-blue))))
+   `(font-lock-function-name-face ((t (:foreground ,rhombus-orange+1))))
+   `(font-lock-variable-name-face ((t (:foreground ,rhombus-dark-red))))
+   `(font-lock-keyword-face ((t (:foreground ,rhombus-blue))))
    `(font-lock-comment-face ((t (:foreground ,rhombus-charcoal))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,rhombus-charcoal :weight light :slant italic))))
-   `(font-lock-type-face ((t (:foreground ,rhombus-light-brown))))
-   `(font-lock-constant-face ((t (:foreground ,rhombus-orange+1))))
+   `(font-lock-type-face ((t (:foreground ,rhombus-off-white))))
+   `(font-lock-constant-face ((t (:foreground ,rhombus-purple))))
    `(font-lock-builtin-face ((t (:foreground ,rhombus-dull-red))))
-   `(font-lock-preprocessor-face ((t (:foreground ,rhombus-sand))))
+   `(font-lock-preprocessor-face ((t (:foreground ,rhombus-off-white))))
    `(font-lock-string-face ((t (:foreground ,rhombus-fg+1))))
-   `(font-lock-doc-face ((t (:foreground ,rhombus-grey))))
+   `(font-lock-doc-face ((t (:foreground ,rhombus-light-blue))))
 
 
    ;; >>>>> eshell
@@ -190,7 +194,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-link ((t (:foreground ,rhombus-link :underline t))))
 
    `(org-agenda-date ((t (:foreground ,rhombus-blue))))
-   `(org-deadline-announce ((t (:foreground ,rhombus-dull-red))))
+   `(org-deadline-announce ((t (:foreground ,rhombus-dark-red))))
    `(org-date ((t (:foreground ,rhombus-link :underline t))))
    `(org-agenda-date-today  ((t (:foreground ,rhombus-grey :weight light :slant italic))))
    `(org-agenda-structure  ((t (:inherit font-lock-comment-face))))
@@ -220,7 +224,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ac-candidate-face ((t (:background ,rhombus-sand :foreground ,"black"))))
    `(ac-selection-face ((t (:background ,rhombus-violet :foreground ,"black"))))
    `(popup-tip-face ((t (:background ,rhombus-sand :foreground ,"black"))))
-   `(popup-scroll-bar-foreground-face ((t (:background ,rhombus-dark-violet))))
+   `(popup-scroll-bar-foreground-face ((t (:background ,rhombus-violet-1))))
    `(popup-scroll-bar-background-face ((t (:background ,rhombus-olive))))
    `(popup-isearch-match ((t (:background ,rhombus-yellow :foreground ,"black"))))
 
@@ -229,8 +233,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(sml/folder ((t (:foreground ,rhombus-charcoal))))
    `(sml/filename ((t (:foreground ,rhombus-grey :weight normal))))
    `(sml/prefix   ((t (:foreground ,rhombus-grey :weight normal))))
-   `(sml/line-number ((t (:foreground ,rhombus-blue :weight normal))))
-   `(sml/col-number ((t (:foreground ,rhombus-green :weight normal))))
+   `(sml/line-number ((t (:foreground ,rhombus-purple :weight normal))))
+   `(sml/col-number ((t (:foreground ,rhombus-violet-2 :weight normal))))
    `(sml/read-only ((t (:foreground ,rhombus-charcoal))))
    `(sml/outside-modified ((t (:foreground ,rhombus-red))))
    `(sml/modified ((t (:foreground ,rhombus-red))))
