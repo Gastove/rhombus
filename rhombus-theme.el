@@ -32,7 +32,7 @@
 (deftheme rhombus "The Rhombus color theme")
 
 ;; Rhombus Color Palette
-(defvar rhombus-colors-alit
+(defvar rhombus-colors-alist
   '(("rhombus-fg"             . "#F8F8F8")
     ("rhombus-fg+1"           . "#FBF9F3")
     ("rhombus-bg"             . "#000000")
@@ -44,19 +44,19 @@
     ("rhombus-orange-1"       . "#D84c00")
     ("rhombus-yellow"         . "#D6d300")
     ("rhombus-olive"          . "#24992c")
-    ("rhomus-violet"          . "#A630db")
+    ("rhombus-violet"         . "#A630db")
     ("rhombus-grey"           . "#Bbbbbb")
     ("rhombus-dark-brown"     . "#9d5717")
     ("rhombus-light-brown"    . "#F7b372")
+    ("rhombus-charcoal"       . "#656868")
 
 ;; Backup-dancing colors
     ("rhombus-blue"           . "#1789d6")
 ;; Other People's Good Ideas
-    ("rhombus-link")
+    ("rhombus-link"           . "#8ACDAA")
     ("rhombus-warn"           . "#9e3564")
     ("rhombus-succ"           . "#809a4d")
-    ("rhombus-hl")
-    ))
+    ("rhombus-hl"             . "#1D1D1D")))
 
 ;; This is seriously cool. H/T to whoever came up with it! Helpful hint: it was
 ;; not me. I got it from badger-theme.el
@@ -77,7 +77,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; >>>>> Built-in
    '(button ((t (:underline t))))
    `(link ((t (:bold t :foreground ,rhombus-blue :underline t :weight bold))))
-   ;; `(link-visited ((t (:foreground ,rhombus-salmon-2 :underline t :weight normal))))
+   ;; `(link-visited ((t (:foreground ,rhombus-grey-2 :underline t :weight normal))))
 
    ;; ordinary text. Its background color is used as the frame's background color.
    `(default ((t (:foreground ,rhombus-fg :background ,rhombus-bg))))
@@ -93,7 +93,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    ;; hru? -- RMD
    ;; fixed line displayed at the top of the emacs window, not in XEmacs
-   ;; `(header-line ((t (:foreground ,rhombus-salmon
+   ;; `(header-line ((t (:foreground ,rhombus-grey
    ;;                                :background ,"black"
    ;;                                :box (:line-width -1 :style released-button)))))
 
@@ -113,7 +113,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; This face is used for displaying an active region
    `(region ((t (:background ,"black"))))
 
-   `(show-paren-match-face ((t (:background ,rhombus-lime :foreground ,"black" ))))
+   `(show-paren-match-face ((t (:background ,rhombus-olive :foreground ,"black" ))))
 
    ;; >>>>> mode-line
    `(mode-line    ((,class (:foreground ,rhombus-charcoal
@@ -123,7 +123,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                    (t :inverse-video nil)))
 
    `(mode-line-inactive ((t (:background ,rhombus-bg+1 :foreground ,"black" :box nil))))
-   `(mode-line-buffer-id ((t (:foreground ,rhombus-salmon))))
+   `(mode-line-buffer-id ((t (:foreground ,rhombus-grey))))
    `(minibuffer-prompt ((t (:foreground ,rhombus-violet))))
 
    ;;   `(mode-line-highlight ((t (:foreground ,rhombus-lime))))
@@ -135,7 +135,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; >>>>> font-lock
    `(font-lock-warning-face ((t (:foreground ,rhombus-yellow :weight bold))))
    `(font-lock-function-name-face ((t (:foreground ,rhombus-orange ))))
-   `(font-lock-variable-name-face ((t (:foreground ,rhombus-salmon))))
+   `(font-lock-variable-name-face ((t (:foreground ,rhombus-grey))))
    `(font-lock-keyword-face ((t (:foreground ,rhombus-blue))))
    `(font-lock-comment-face ((t (:foreground ,rhombus-charcoal))))
    ;;`(font-lock-comment-delimiter-face ((t (:foreground ,rhombus-charcoal :weight light :slant italic))))
@@ -148,7 +148,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 
 
    ;; >>>>> eshell
-   `(eshell-prompt ((t (:foreground ,rhombus-lime))))
+   `(eshell-prompt ((t (:foreground ,rhombus-olive))))
    `(eshell-ls-archive ((t (:foreground ,rhombus-orange :weight bold))))
    `(eshell-ls-backup ((t (:inherit font-lock-comment-face))))
    `(eshell-ls-clutter ((t (:inherit font-lock-comment-face))))
@@ -162,11 +162,11 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    ;; >>>>> Org mode
    `(org-document-info-keyword ((t (:foreground ,rhombus-olive))))
-   `(org-document-title ((t (:foreground ,rhombus-salmon :height 1.50))))
+   `(org-document-title ((t (:foreground ,rhombus-grey :height 1.50))))
    `(org-archived ((t (:foreground ,rhombus-fg :weight bold))))
    `(org-checkbox ((t (:foreground ,rhombus-fg+1 :foreground ,rhombus-olive
                                    :box (:line-width 1 :style released-button)))))
-   `(org-done ((t (:foreground ,rhombus-lime :strike-through t))))
+   `(org-done ((t (:foreground ,rhombus-olive :strike-through t))))
    `(org-todo ((t (:foreground ,rhombus-red))))
    `(org-formula ((t (:foreground ,rhombus-violet))))
    `(org-headline-done ((t (:strike-through t :foreground ,rhombus-charcoal))))
@@ -175,7 +175,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-level-2 ((t (:foreground ,rhombus-violet))))
    `(org-level-3 ((t (:foreground ,rhombus-orange))))
    `(org-level-4 ((t (:foreground ,rhombus-yellow))))
-   `(org-level-5 ((t (:foreground ,rhombus-salmon))))
+   `(org-level-5 ((t (:foreground ,rhombus-grey))))
    `(org-level-6 ((t (:foreground ,rhombus-green))))
    `(org-level-7 ((t (:foreground ,rhombus-brown))))
    `(org-level-8 ((t (:foreground ,rhombus-teal))))
@@ -184,7 +184,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-agenda-date ((t (:foreground ,rhombus-blue))))
    `(org-deadline-announce ((t (:foreground ,rhombus-dull-red))))
    `(org-date ((t (:foreground ,rhombus-link :underline t))))
-   `(org-agenda-date-today  ((t (:foreground ,rhombus-salmon :weight light :slant italic))))
+   `(org-agenda-date-today  ((t (:foreground ,rhombus-grey :weight light :slant italic))))
    `(org-agenda-structure  ((t (:inherit font-lock-comment-face))))
    ;; `(org-scheduled ((t (:foreground ,zenburn-green+4))))x
    ;; `(org-scheduled-previously ((t (:foreground ,zenburn-red-4))))
@@ -198,7 +198,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-tag ((t (:bold t :foreground ,rhombus-orange :strike-through nil))))
    `(org-warning ((t (:bold t :foreground ,rhombus-pink :weight bold))))
    `(org-column ((t (:background ,"black"))))
-   `(org-column-title ((t (:background ,"black" :foreground ,rhombus-lime :underline t))))
+   `(org-column-title ((t (:background ,"black" :foreground ,rhombus-olive :underline t))))
    `(org-mode-line-clock ((t (:foreground ,rhombus-yellow))))
    `(org-footnote ((t (:foreground ,rhombus-link :underline t))))
    `(org-code ((t (:foreground ,rhombus-olive))))
@@ -220,8 +220,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; >>>>> smart-mode-line
    ;; `(sml/global ((t (:background ,"black" :inverse-video nil))))
    ;; `(sml/folder ((t (:foreground ,rhombus-charcoal))))
-   ;; `(sml/filename ((t (:foreground ,rhombus-salmon :weight normal))))
-   ;; `(sml/prefix   ((t (:foreground ,rhombus-salmon :weight normal))))
+   ;; `(sml/filename ((t (:foreground ,rhombus-grey :weight normal))))
+   ;; `(sml/prefix   ((t (:foreground ,rhombus-grey :weight normal))))
    ;; `(sml/line-number ((t (:foreground ,rhombus-blue :weight normal))))
    ;; `(sml/col-number ((t (:foreground ,rhombus-green :weight normal))))
    ;; `(sml/read-only ((t (:foreground ,rhombus-charcoal))))
@@ -276,4 +276,14 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(helm-selection ((t (:background rhombus-hl))))
    `(helm-source-header ((t (:background rhombus-dark-brown :foreground rhombus-fg :weight bold :height 1.3 :family "Sans Serif"))))
    ))
+
+;;; Footer
+
+;;;###autoload
+(and load-file-name
+     (boundp 'custom-theme-load-path)
+     (add-to-list 'custom-theme-load-path
+                  (file-name-as-directory
+                   (file-name-directory load-file-name))))
+
 ;;; rhombus-theme.el ends here
