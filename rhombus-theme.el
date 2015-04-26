@@ -40,6 +40,7 @@
 
 ;; The Main Pallette
     ("rhombus-red"            . "#9e1200")
+    ("rhombus-charcoal"       . "#656868")
     ("rhombus-orange"         . "#fa9a4b")
     ("rhombus-orange-1"       . "#D84c00")
     ("rhombus-yellow"         . "#D6d300")
@@ -48,15 +49,24 @@
     ("rhombus-grey"           . "#Bbbbbb")
     ("rhombus-dark-brown"     . "#9d5717")
     ("rhombus-light-brown"    . "#F7b372")
-    ("rhombus-charcoal"       . "#656868")
+    ("rhombus-sand"           . "#C7B299")
+    ("rhombus-green"          . "#24992c")
+    ("rhombus-pink"           . "#D82e88")
 
 ;; Backup-dancing colors
     ("rhombus-blue"           . "#1789d6")
+    ("rhombus-dark-violet"    . "#635770")
+    ("rhombus-darker-violet"  . "#433F4F")
+    ("rhombus-teal"           . "#65A399")
+    ("rhombus-dull-red"       . "#A55662")
+
 ;; Other People's Good Ideas
     ("rhombus-link"           . "#8ACDAA")
     ("rhombus-warn"           . "#9e3564")
     ("rhombus-succ"           . "#809a4d")
     ("rhombus-hl"             . "#1D1D1D")))
+
+;;(makunbound 'rhombus-colors-alist)
 
 ;; This is seriously cool. H/T to whoever came up with it! Helpful hint: it was
 ;; not me. I got it from badger-theme.el
@@ -177,7 +187,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-level-4 ((t (:foreground ,rhombus-yellow))))
    `(org-level-5 ((t (:foreground ,rhombus-grey))))
    `(org-level-6 ((t (:foreground ,rhombus-green))))
-   `(org-level-7 ((t (:foreground ,rhombus-brown))))
+   `(org-level-7 ((t (:foreground ,rhombus-dark-brown))))
    `(org-level-8 ((t (:foreground ,rhombus-teal))))
    `(org-link ((t (:foreground ,rhombus-link :underline t))))
 
@@ -240,11 +250,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(flyspell-duplicate ((t (:underline (:color ,rhombus-yellow :style wave)))))
 
    ;; >>>>> Company Mode
-   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
-   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
-   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+   ;; `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+   ;; `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+   ;; `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+   ;; `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+   ;; `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
 
    ;; >>>>> Helm
    ;; `(helm-bookmark-info)
@@ -272,9 +282,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; `(helm-ff-executable)
    ;; `(helm-moccur-buffer)
    ;; `(helm-resume-need-update)
-   `(helm-ff-directory ((t (:background rhombus-bg+1 :foreground rhombus-red))))
-   `(helm-selection ((t (:background rhombus-hl))))
-   `(helm-source-header ((t (:background rhombus-dark-brown :foreground rhombus-fg :weight bold :height 1.3 :family "Sans Serif"))))
+   `(helm-ff-directory ((t (:background ,rhombus-bg+1 :foreground ,rhombus-red))))
+   `(helm-selection ((t (:background ,rhombus-hl))))
+   `(helm-source-header ((t (:background ,rhombus-dark-brown :foreground ,rhombus-fg :weight bold :height 1.3 :family "Sans Serif"))))
    ))
 
 ;;; Footer
