@@ -1,2 +1,10 @@
+
 /badger-theme.el
 /flatland-black-theme.el
+
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
