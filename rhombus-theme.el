@@ -31,6 +31,8 @@
 ;;; Code:
 (deftheme rhombus "The Rhombus color theme")
 
+(require 'color)
+
 ;; Rhombus Color Palette
 (defvar rhombus-colors-alist
   '(("rhombus-fg"             . "#F8F8F8")
