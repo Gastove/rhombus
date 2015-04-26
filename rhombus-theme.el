@@ -3,7 +3,7 @@
 ;; Copyright (C) 2015 Ross Donaldson
 
 ;; Author: Ross Donaldson <gastove@gmail.com>
-;; URL: https://github.com/Gastove/rhombus-theme
+;; URL: https://github.com/Gastove/rhombus
 ;; Version 1.0.0
 
 ;; This program is free software; you can redistribute it and/or modify
