@@ -56,6 +56,7 @@
 
 ;; Backup-dancing colors
     ("rhombus-blue"           . "#1789d6")
+    ("rhombus-light-blue"     . "#6cbbf1")
     ("rhombus-dark-violet"    . "#635770")
     ("rhombus-darker-violet"  . "#433F4F")
     ("rhombus-teal"           . "#65A399")
@@ -144,18 +145,18 @@ Also bind `class' to ((class color) (min-colors 89))."
 
 
    ;; >>>>> font-lock
-   `(font-lock-warning-face ((t (:foreground ,rhombus-yellow :weight bold))))
-   `(font-lock-function-name-face ((t (:foreground ,rhombus-orange ))))
+   `(font-lock-warning-face ((t (:foreground ,rhombus-warn :weight bold))))
+   `(font-lock-function-name-face ((t (:foreground ,rhombus-orange))))
    `(font-lock-variable-name-face ((t (:foreground ,rhombus-grey))))
-   `(font-lock-keyword-face ((t (:foreground ,rhombus-red))))
+   `(font-lock-keyword-face ((t (:foreground ,rhombus-light-blue))))
    `(font-lock-comment-face ((t (:foreground ,rhombus-charcoal))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,rhombus-charcoal :weight light :slant italic))))
-   `(font-lock-type-face ((t (:foreground ,rhombus-sand))))
+   `(font-lock-type-face ((t (:foreground ,rhombus-light-brown))))
    `(font-lock-constant-face ((t (:foreground ,rhombus-orange-1))))
-   `(font-lock-builtin-face ((t (:foreground ,rhombus-orange+1))))
+   `(font-lock-builtin-face ((t (:foreground ,rhombus-yellow))))
    `(font-lock-preprocessor-face ((t (:foreground ,rhombus-sand))))
-   `(font-lock-string-face ((t (:foreground ,rhombus-sand))))
-   `(font-lock-doc-face ((t (:foreground ,rhombus-green))))
+   `(font-lock-string-face ((t (:foreground ,rhombus-fg+1))))
+   `(font-lock-doc-face ((t (:foreground ,rhombus-grey))))
 
 
    ;; >>>>> eshell
